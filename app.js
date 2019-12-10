@@ -34,16 +34,18 @@ ap.use(express.static(path.join(__dirname, 'pub')));
 
 
 ap.get("/", function(request, response){
-    Art.find({}, function (err, res) {
-        if (err){
-            console.log(err);
-        }  else {
-            response.render('index', {
-                title: 'Articles',
-                articles: res
-            });
-        }
-    });
+    response.end('<div><ul><li><a href="/">home</a></li><li><a href="/about">about</a></li></ul><h1>Home page</h1></div>');
+
+    // Art.find({}, function (err, res) {
+    //     if (err){
+    //         console.log(err);
+    //     }  else {
+    //         response.render('index', {
+    //             title: 'Articles',
+    //             articles: res
+    //         });
+    //     }
+    // });
 });
 
 let articles = require('./routes/articles');
