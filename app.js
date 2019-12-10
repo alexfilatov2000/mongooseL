@@ -3,6 +3,8 @@ const path = require('path');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
+const PORT = process.env.PORT || 80;
+
 mongoose.connect('mongodb://localhost:27017/nodekb', { useNewUrlParser: true, useUnifiedTopology: true });
 
 let db = mongoose.connection;
@@ -50,4 +52,6 @@ ap.use('/articles', articles);
 ap.use('/users', users);
 
 
-ap.listen(3001);
+app.listen(PORT, () => {
+    console.log('server has been started...');
+});
