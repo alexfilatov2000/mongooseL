@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 
 const PORT = process.env.MONGODB_URI || 80;
 
-mongoose.connect('mongodb://localhost:27017/nodekb', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('heroku_m0wz6p60', { useNewUrlParser: true, useUnifiedTopology: true });
 
 let db = mongoose.connection;
 
