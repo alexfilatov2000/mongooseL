@@ -3,9 +3,9 @@ const path = require('path');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
-const PORT = process.env.MONGODB_URI || 80;
+const PORT = process.env.PORT || 80;
 
-mongoose.connect('heroku_m0wz6p60', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 let db = mongoose.connection;
 
