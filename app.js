@@ -55,6 +55,4 @@ ap.use('/articles', articles);
 ap.use('/users', users);
 
 
-ap.listen(PORT, () => {
-    console.log('server has been started...');
-});
+ap.listen(PORT);
