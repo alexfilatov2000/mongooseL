@@ -4,17 +4,15 @@ block content
     h1= title
 
     form(method="POST", action="/articles/add")
-        label Title:
-        input(type="text", name="title")
-        br
+        .form-group
+            label Title:
+            input.form-control(type="text", name="title")
+        .form-group
+            label Author:
+            input.form-control(type="text", name="author")
+        .form-group
+            label Body:
+            input.form-control(type="text", name="body")
 
-        label Author:
-        input(type="text", name="author")
-        br
-
-        label Body:
-        input(type="text", name="body")
-        br
-
-        input(type="submit", value="Submit")
+        input.btn-primary(type="submit", value="Submit")
 

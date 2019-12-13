@@ -2,11 +2,8 @@ extends layout
 
 block content
     h1= title
-    a(href='/articles/add/') Add articles
-    br
-    a(href='/users/register/') register
     p Welcome to #{title}
-    ul
+    ul.list-group
         each val in articles
-            li
+            li.list-group-item
                 a(href="/articles/"+val._id)= val.title

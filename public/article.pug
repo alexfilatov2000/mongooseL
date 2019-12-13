@@ -5,7 +5,7 @@ block content
     p= article.author
     p= article.body
     hr
-    a(href='/articles/edit/'+article._id style="text-decoration: none") Edit
-    a(href='#' style="text-decoration: none" id=article._id class="delete-art")  Delete
+    a.btn.btn-primary(href='/articles/edit/'+article._id style="text-decoration: none") Edit
+    a.btn.btn-danger(href='#' style="text-decoration: none" id=article._id class="delete-art")  Delete
 
 

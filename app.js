@@ -4,8 +4,12 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
 const PORT = process.env.PORT || 80;
+//process.env.PORT || 80
 
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+
+//process.env.MONGODB_URI
+//mongodb://localhost:27017/
 
 let db = mongoose.connection;
 
